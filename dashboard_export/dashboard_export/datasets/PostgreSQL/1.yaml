@@ -1,0 +1,68 @@
+table_name: '1'
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: postgres
+schema: public
+sql: SELECT 
+    GREATEST(
+        COUNT('created_at'),
+        COUNT('type_id'),
+        COUNT('type'),
+        COUNT('user_id'),
+        COUNT('user_login'),
+        COUNT('surname'),
+        COUNT('user_ip'),
+        COUNT('user_role'),
+        COUNT('value'),
+        COUNT('custom_type'),
+        COUNT('policy_id'),
+        COUNT('policy_name'),
+        COUNT('incident_rules'),
+        COUNT('syslog_active'),
+        COUNT('incident_countermeasures'),
+        COUNT('incident_max_pass_bps'),
+        COUNT('incident_max_input_bps'),
+        COUNT('incident_max_drop_pps'),
+        COUNT('incident_max_drop_bps'),
+        COUNT('incident_started_at')
+    ) AS count_line
+   FROM 
+    mitigator_table
+   WHERE 
+    'created_at' IS NOT NULL OR 'type_id' IS NOT NULL OR 'type' IS NOT NULL OR 'user_id' IS NOT NULL OR 'user_login' IS NOT NULL OR 'surname' IS NOT NULL OR 'user_ip' IS NOT NULL OR 'user_role' IS NOT NULL OR 'value' IS NOT NULL OR 'custom_type' IS NOT NULL OR 'policy_id' IS NOT NULL OR 'policy_name' IS NOT NULL OR 'incident_rules' IS NOT NULL OR 'syslog_active' IS NOT NULL OR 'incident_countermeasures' IS NOT NULL OR 'incident_max_pass_bps' IS NOT NULL OR 'incident_max_input_bps' IS NOT NULL OR 'incident_max_drop_pps' IS NOT NULL OR 'incident_max_drop_bps' IS NOT NULL OR 'incident_started_at' IS NOT NULL;
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 57d109fb-7ef4-40f8-86f0-c8c254839fcc
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: count_line
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 2f651e35-38e7-4b9b-a47e-87996c769118

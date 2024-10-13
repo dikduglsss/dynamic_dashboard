@@ -1,0 +1,54 @@
+table_name: '4'
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: postgres
+schema: public
+sql: "SELECT\r\n    COUNT(*) FILTER (WHERE data_type ILIKE 'character varying' OR data_type ILIKE 'text') AS text_column_count,\r\n    COUNT(*) FILTER (WHERE data_type ILIKE 'integer' OR data_type ILIKE 'numeric' OR data_type ILIKE 'double precision' OR data_type ILIKE 'real') AS numeric_column_count\r\nFROM information_schema.columns\r\nWHERE table_name = 'my_table'\r\nAND column_name IN ('created_at', 'type_id', 'type', 'user_login', 'surname', 'user_ip', 'user_role', 'value', 'custom_type', 'policy_name', 'syslog_active', 'incident_countermeasures', 'incident_started_at', 'user_id', 'policy_id', 'incident_rules', 'incident_max_pass_bps', 'incident_max_input_bps', 'incident_max_drop_pps', 'incident_max_drop_bps')"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 7619e636-f052-4c74-8c72-66bc3a0fc9c0
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: numeric_column_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: text_column_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 2f651e35-38e7-4b9b-a47e-87996c769118

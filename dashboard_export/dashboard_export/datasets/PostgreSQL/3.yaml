@@ -1,0 +1,60 @@
+table_name: '3'
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: postgres
+schema: public
+sql: SELECT
+   column_name AS "Column_Name",
+   data_type AS "Data_Type"
+   FROM
+       information_schema.columns
+  WHERE table_name = 'my_table'
+  AND column_name IN ('created_at', 'type_id', 'type', 'user_login', 'surname', 'user_ip', 'user_role', 'value', 'custom_type', 'policy_name', 'syslog_active', 'incident_countermeasures', 'incident_started_at', 'user_id', 'policy_id', 'incident_rules', 'incident_max_pass_bps', 'incident_max_input_bps', 'incident_max_drop_pps', 'incident_max_drop_bps')
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: be05046b-108d-46a2-b7bc-e58d178b5d24
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: Column_Name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Data_Type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 2f651e35-38e7-4b9b-a47e-87996c769118
