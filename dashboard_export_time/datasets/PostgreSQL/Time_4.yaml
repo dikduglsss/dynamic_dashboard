@@ -1,0 +1,60 @@
+table_name: Time_4
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: postgres
+schema: public
+sql: SELECT
+   column_name AS "Column_Name",
+   data_type AS "Data_Type"
+   FROM
+       information_schema.columns
+   WHERE table_name = 'anti_frod'
+   AND column_name IN ('atm_acquiring_country', 'atm_acquiring_icc', 'atm_branch', 'atm_card_entry_mode', 'atm_cardless', 'atm_cash_in', 'atm_cash_in_acc', 'atm_cash_in_pay', 'atm_city', 'atm_class', 'atm_continent', 'atm_country', 'atm_cvv_check', 'atm_exchange', 'atm_forwarding_icc', 'atm_is_fi_owner', 'atm_merchant_id', 'atm_merchant_name', 'atm_owner_fi_name', 'atm_pin_check', 'atm_pin_entry_mode', 'atm_receiving_icc', 'atm_region', 'atm_retailer_name', 'atm_usr_num_hit', 'atm_virt', 'atm_zip', 'branch_branch', 'branch_host', 'branch_office', 'branch_operator_id', 'branch_tercode', 'card_balance', 'card_balance_currency', 'card_bin', 'card_category', 'card_contract_currency', 'card_day_limit', 'card_day_limit_currency', 'card_days_since_issue', 'card_expire_date', 'card_issue_date', 'card_issuer_country', 'card_issuer_id', 'card_number', 'card_product', 'card_system', 'card_type', 'cardholder_amount', 'cardholder_currency', 'channel', 'client_trx_id', 'conv_rate', 'device_tz', 'devi_src_mob_har', 'devi_src_mob_osid', 'ec_card_validarion_res', 'ec_cvv2_data', 'event_time', 'event_type', 'evt_act', 'ext_amount_rub', 'ext_branch_region', 'ext_device_hash', 'ext_evt_des', 'ext_issuer_bank_name', 'ext_mtid', 'ext_operation_category', 'ext_operation_id', 'ext_operation_type', 'ext_payee_acc', 'ext_payee_bic', 'ext_payee_card_num', 'ext_payee_inn', 'ext_user_phone', 'ext_payer_inn', 'ext_resp_code', 'ext_user_bic', 'ext_user_inn', 'ext_usr_log', 'ext_usr_tax', 'fraud_type', 'fraud_type_aml', 'geoip_city', 'geoip_country', 'geoip_provider', 'geoip_region', 'ip_classa', 'ip_classb', 'ip_classc', 'int_web_devi_key', 'ip_mv_too_fast', 'mcc', 'mcc_group', 'operator_department', 'operator_name', 'operator_nubmer', 'operator_position', 'org_id', 'payee_account_type', 'payee_amount', 'payee_bank_type', 'payee_bic', 'payee_currency', 'payee_name', 'payee_ownership', 'payee_rate', 'payee_user_id', 'payer_bic', 'payer_name', 'policy_action', 'policy_action_aml', 'policy_action_fr', 'policy_rule_id', 'policy_rule_id_aml', 'policy_rule_id_fr', 'policy_rule_name', 'policy_rule_num_aml', 'policy_rule_num_fr', 'pos_active_state', 'pos_auth_cap', 'pos_auth_entity', 'pos_auth_method', 'pos_capture_cap', 'pos_card_presence', 'pos_cardholder_presence', 'pos_data_input_cap', 'pos_data_input_mode', 'pos_data_out_cap', 'pos_final_scoring', 'pos_merchant_scoring', 'pos_op_env', 'pos_partial_approval', 'pos_pin_cap_cap', 'pos_pin_service_code', 'pos_pin_service_result', 'pos_purchase_amt_only', 'pos_real_time_subst', 'pos_term_out_cap', 'pos_type', 'repl_amount', 'resolution', 'resolution_aml', 'resolution_date', 'resolution_date_aml', 'risk_score_aml_final', 'risk_score_final', 'risk_score_payee_final', 'ter_code', 'tra_cln_def', 'tra_cln_typ', 'tra_tra_amo_amo', 'tra_tra_amo_cur', 'tra_tra_oth_id', 'tra_tra_own_id', 'trx_atm_id', 'trx_terminal_id', 'u_atm_day_f_hit', 'u_atm_day_l_hit', 'u_day_sin_ema_cha', 'u_day_sin_f_hit', 'u_day_sin_pwd_cha', 'u_day_sin_tel_cha', 'u_devprn_day_f_hit', 'u_hour_sin_f_hit', 'u_ip_day_sin_f_hit', 'u_ip_diff_from_p', 'u_ipb_day_sin_f_hit', 'u_ipc_day_sin_f_hit', 'u_isp_day_sin_f_hit', 'u_mobdev_day_sin_f_hit', 'u_mobdev_day_sin_l_hit', 'u_mobisp_day_sin_f_hit', 'u_mobmac_day_sin_f_hit', 'u_p_day_sin_f_hit', 'u_sim_day_sin_f_hit', 'u_webdev_day_sin_f_hit', 'u_webdev_day_sin_l_hit', 'unified_id', 'user_birthdate', 'user_category', 'user_doc_number', 'user_doc_type', 'user_first_name', 'user_id', 'user_last_name', 'user_name', 'user_patronymic', 'user_segment', 'user_type', 'usr_ip_cur_add') 
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 763ef388-5be4-46bb-b7e7-f0fb3254eeff
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: Column_Name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Data_Type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 2f651e35-38e7-4b9b-a47e-87996c769118

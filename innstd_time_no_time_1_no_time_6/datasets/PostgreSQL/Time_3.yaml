@@ -1,0 +1,1540 @@
+table_name: Time_3
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: postgres
+schema: public
+sql: 'SELECT
+
+  ''atm_acquiring_country'' AS column_name,
+
+  COUNT(DISTINCT atm_acquiring_country) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_acquiring_icc'' AS column_name,
+
+  COUNT(DISTINCT atm_acquiring_icc) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_branch'' AS column_name,
+
+  COUNT(DISTINCT atm_branch) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_card_entry_mode'' AS column_name,
+
+  COUNT(DISTINCT atm_card_entry_mode) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_city'' AS column_name,
+
+  COUNT(DISTINCT atm_city) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_class'' AS column_name,
+
+  COUNT(DISTINCT atm_class) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_continent'' AS column_name,
+
+  COUNT(DISTINCT atm_continent) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_country'' AS column_name,
+
+  COUNT(DISTINCT atm_country) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_cvv_check'' AS column_name,
+
+  COUNT(DISTINCT atm_cvv_check) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_forwarding_icc'' AS column_name,
+
+  COUNT(DISTINCT atm_forwarding_icc) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_is_fi_owner'' AS column_name,
+
+  COUNT(DISTINCT atm_is_fi_owner) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_merchant_id'' AS column_name,
+
+  COUNT(DISTINCT atm_merchant_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_merchant_name'' AS column_name,
+
+  COUNT(DISTINCT atm_merchant_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_owner_fi_name'' AS column_name,
+
+  COUNT(DISTINCT atm_owner_fi_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_pin_check'' AS column_name,
+
+  COUNT(DISTINCT atm_pin_check) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_pin_entry_mode'' AS column_name,
+
+  COUNT(DISTINCT atm_pin_entry_mode) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_receiving_icc'' AS column_name,
+
+  COUNT(DISTINCT atm_receiving_icc) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_region'' AS column_name,
+
+  COUNT(DISTINCT atm_region) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_retailer_name'' AS column_name,
+
+  COUNT(DISTINCT atm_retailer_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''atm_zip'' AS column_name,
+
+  COUNT(DISTINCT atm_zip) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''branch_branch'' AS column_name,
+
+  COUNT(DISTINCT branch_branch) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''branch_host'' AS column_name,
+
+  COUNT(DISTINCT branch_host) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''branch_office'' AS column_name,
+
+  COUNT(DISTINCT branch_office) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''branch_operator_id'' AS column_name,
+
+  COUNT(DISTINCT branch_operator_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''branch_tercode'' AS column_name,
+
+  COUNT(DISTINCT branch_tercode) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_balance_currency'' AS column_name,
+
+  COUNT(DISTINCT card_balance_currency) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_bin'' AS column_name,
+
+  COUNT(DISTINCT card_bin) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_category'' AS column_name,
+
+  COUNT(DISTINCT card_category) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_contract_currency'' AS column_name,
+
+  COUNT(DISTINCT card_contract_currency) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_day_limit_currency'' AS column_name,
+
+  COUNT(DISTINCT card_day_limit_currency) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_days_since_issue'' AS column_name,
+
+  COUNT(DISTINCT card_days_since_issue) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_expire_date'' AS column_name,
+
+  COUNT(DISTINCT card_expire_date) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_issue_date'' AS column_name,
+
+  COUNT(DISTINCT card_issue_date) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_issuer_country'' AS column_name,
+
+  COUNT(DISTINCT card_issuer_country) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_issuer_id'' AS column_name,
+
+  COUNT(DISTINCT card_issuer_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_number'' AS column_name,
+
+  COUNT(DISTINCT card_number) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_product'' AS column_name,
+
+  COUNT(DISTINCT card_product) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_system'' AS column_name,
+
+  COUNT(DISTINCT card_system) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''card_type'' AS column_name,
+
+  COUNT(DISTINCT card_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''cardholder_currency'' AS column_name,
+
+  COUNT(DISTINCT cardholder_currency) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''channel'' AS column_name,
+
+  COUNT(DISTINCT channel) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''client_trx_id'' AS column_name,
+
+  COUNT(DISTINCT client_trx_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''device_tz'' AS column_name,
+
+  COUNT(DISTINCT device_tz) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''devi_src_mob_har'' AS column_name,
+
+  COUNT(DISTINCT devi_src_mob_har) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''devi_src_mob_osid'' AS column_name,
+
+  COUNT(DISTINCT devi_src_mob_osid) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ec_card_validarion_res'' AS column_name,
+
+  COUNT(DISTINCT ec_card_validarion_res) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ec_cvv2_data'' AS column_name,
+
+  COUNT(DISTINCT ec_cvv2_data) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''event_type'' AS column_name,
+
+  COUNT(DISTINCT event_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''evt_act'' AS column_name,
+
+  COUNT(DISTINCT evt_act) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_branch_region'' AS column_name,
+
+  COUNT(DISTINCT ext_branch_region) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_device_hash'' AS column_name,
+
+  COUNT(DISTINCT ext_device_hash) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_evt_des'' AS column_name,
+
+  COUNT(DISTINCT ext_evt_des) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_issuer_bank_name'' AS column_name,
+
+  COUNT(DISTINCT ext_issuer_bank_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_mtid'' AS column_name,
+
+  COUNT(DISTINCT ext_mtid) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_operation_category'' AS column_name,
+
+  COUNT(DISTINCT ext_operation_category) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_operation_id'' AS column_name,
+
+  COUNT(DISTINCT ext_operation_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_operation_type'' AS column_name,
+
+  COUNT(DISTINCT ext_operation_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_payee_acc'' AS column_name,
+
+  COUNT(DISTINCT ext_payee_acc) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_payee_bic'' AS column_name,
+
+  COUNT(DISTINCT ext_payee_bic) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_payee_card_num'' AS column_name,
+
+  COUNT(DISTINCT ext_payee_card_num) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_payee_inn'' AS column_name,
+
+  COUNT(DISTINCT ext_payee_inn) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_user_phone'' AS column_name,
+
+  COUNT(DISTINCT ext_user_phone) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_payer_inn'' AS column_name,
+
+  COUNT(DISTINCT ext_payer_inn) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_resp_code'' AS column_name,
+
+  COUNT(DISTINCT ext_resp_code) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_user_bic'' AS column_name,
+
+  COUNT(DISTINCT ext_user_bic) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_user_inn'' AS column_name,
+
+  COUNT(DISTINCT ext_user_inn) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_usr_log'' AS column_name,
+
+  COUNT(DISTINCT ext_usr_log) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ext_usr_tax'' AS column_name,
+
+  COUNT(DISTINCT ext_usr_tax) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''fraud_type'' AS column_name,
+
+  COUNT(DISTINCT fraud_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''fraud_type_aml'' AS column_name,
+
+  COUNT(DISTINCT fraud_type_aml) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''geoip_city'' AS column_name,
+
+  COUNT(DISTINCT geoip_city) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''geoip_country'' AS column_name,
+
+  COUNT(DISTINCT geoip_country) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''geoip_provider'' AS column_name,
+
+  COUNT(DISTINCT geoip_provider) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''geoip_region'' AS column_name,
+
+  COUNT(DISTINCT geoip_region) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ip_classa'' AS column_name,
+
+  COUNT(DISTINCT ip_classa) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ip_classb'' AS column_name,
+
+  COUNT(DISTINCT ip_classb) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ip_classc'' AS column_name,
+
+  COUNT(DISTINCT ip_classc) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''int_web_devi_key'' AS column_name,
+
+  COUNT(DISTINCT int_web_devi_key) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''mcc'' AS column_name,
+
+  COUNT(DISTINCT mcc) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''mcc_group'' AS column_name,
+
+  COUNT(DISTINCT mcc_group) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''operator_department'' AS column_name,
+
+  COUNT(DISTINCT operator_department) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''operator_name'' AS column_name,
+
+  COUNT(DISTINCT operator_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''operator_nubmer'' AS column_name,
+
+  COUNT(DISTINCT operator_nubmer) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''operator_position'' AS column_name,
+
+  COUNT(DISTINCT operator_position) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''org_id'' AS column_name,
+
+  COUNT(DISTINCT org_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_account_type'' AS column_name,
+
+  COUNT(DISTINCT payee_account_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_bank_type'' AS column_name,
+
+  COUNT(DISTINCT payee_bank_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_bic'' AS column_name,
+
+  COUNT(DISTINCT payee_bic) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_currency'' AS column_name,
+
+  COUNT(DISTINCT payee_currency) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_name'' AS column_name,
+
+  COUNT(DISTINCT payee_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_ownership'' AS column_name,
+
+  COUNT(DISTINCT payee_ownership) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payee_user_id'' AS column_name,
+
+  COUNT(DISTINCT payee_user_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payer_bic'' AS column_name,
+
+  COUNT(DISTINCT payer_bic) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''payer_name'' AS column_name,
+
+  COUNT(DISTINCT payer_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_action'' AS column_name,
+
+  COUNT(DISTINCT policy_action) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_action_aml'' AS column_name,
+
+  COUNT(DISTINCT policy_action_aml) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_action_fr'' AS column_name,
+
+  COUNT(DISTINCT policy_action_fr) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_rule_id'' AS column_name,
+
+  COUNT(DISTINCT policy_rule_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_rule_id_aml'' AS column_name,
+
+  COUNT(DISTINCT policy_rule_id_aml) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_rule_id_fr'' AS column_name,
+
+  COUNT(DISTINCT policy_rule_id_fr) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_rule_name'' AS column_name,
+
+  COUNT(DISTINCT policy_rule_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_rule_num_aml'' AS column_name,
+
+  COUNT(DISTINCT policy_rule_num_aml) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''policy_rule_num_fr'' AS column_name,
+
+  COUNT(DISTINCT policy_rule_num_fr) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_active_state'' AS column_name,
+
+  COUNT(DISTINCT pos_active_state) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_auth_cap'' AS column_name,
+
+  COUNT(DISTINCT pos_auth_cap) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_auth_entity'' AS column_name,
+
+  COUNT(DISTINCT pos_auth_entity) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_auth_method'' AS column_name,
+
+  COUNT(DISTINCT pos_auth_method) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_capture_cap'' AS column_name,
+
+  COUNT(DISTINCT pos_capture_cap) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_card_presence'' AS column_name,
+
+  COUNT(DISTINCT pos_card_presence) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_cardholder_presence'' AS column_name,
+
+  COUNT(DISTINCT pos_cardholder_presence) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_data_input_cap'' AS column_name,
+
+  COUNT(DISTINCT pos_data_input_cap) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_data_input_mode'' AS column_name,
+
+  COUNT(DISTINCT pos_data_input_mode) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_data_out_cap'' AS column_name,
+
+  COUNT(DISTINCT pos_data_out_cap) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_final_scoring'' AS column_name,
+
+  COUNT(DISTINCT pos_final_scoring) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_merchant_scoring'' AS column_name,
+
+  COUNT(DISTINCT pos_merchant_scoring) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_op_env'' AS column_name,
+
+  COUNT(DISTINCT pos_op_env) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_partial_approval'' AS column_name,
+
+  COUNT(DISTINCT pos_partial_approval) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_pin_cap_cap'' AS column_name,
+
+  COUNT(DISTINCT pos_pin_cap_cap) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_pin_service_code'' AS column_name,
+
+  COUNT(DISTINCT pos_pin_service_code) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_pin_service_result'' AS column_name,
+
+  COUNT(DISTINCT pos_pin_service_result) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_purchase_amt_only'' AS column_name,
+
+  COUNT(DISTINCT pos_purchase_amt_only) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_real_time_subst'' AS column_name,
+
+  COUNT(DISTINCT pos_real_time_subst) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_term_out_cap'' AS column_name,
+
+  COUNT(DISTINCT pos_term_out_cap) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''pos_type'' AS column_name,
+
+  COUNT(DISTINCT pos_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''resolution'' AS column_name,
+
+  COUNT(DISTINCT resolution) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''resolution_aml'' AS column_name,
+
+  COUNT(DISTINCT resolution_aml) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''resolution_date'' AS column_name,
+
+  COUNT(DISTINCT resolution_date) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''resolution_date_aml'' AS column_name,
+
+  COUNT(DISTINCT resolution_date_aml) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''ter_code'' AS column_name,
+
+  COUNT(DISTINCT ter_code) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''tra_cln_def'' AS column_name,
+
+  COUNT(DISTINCT tra_cln_def) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''tra_cln_typ'' AS column_name,
+
+  COUNT(DISTINCT tra_cln_typ) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''tra_tra_amo_cur'' AS column_name,
+
+  COUNT(DISTINCT tra_tra_amo_cur) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''tra_tra_oth_id'' AS column_name,
+
+  COUNT(DISTINCT tra_tra_oth_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''tra_tra_own_id'' AS column_name,
+
+  COUNT(DISTINCT tra_tra_own_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''trx_atm_id'' AS column_name,
+
+  COUNT(DISTINCT trx_atm_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''trx_terminal_id'' AS column_name,
+
+  COUNT(DISTINCT trx_terminal_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''unified_id'' AS column_name,
+
+  COUNT(DISTINCT unified_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_birthdate'' AS column_name,
+
+  COUNT(DISTINCT user_birthdate) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_category'' AS column_name,
+
+  COUNT(DISTINCT user_category) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_doc_number'' AS column_name,
+
+  COUNT(DISTINCT user_doc_number) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_doc_type'' AS column_name,
+
+  COUNT(DISTINCT user_doc_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_first_name'' AS column_name,
+
+  COUNT(DISTINCT user_first_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_id'' AS column_name,
+
+  COUNT(DISTINCT user_id) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_last_name'' AS column_name,
+
+  COUNT(DISTINCT user_last_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_name'' AS column_name,
+
+  COUNT(DISTINCT user_name) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_patronymic'' AS column_name,
+
+  COUNT(DISTINCT user_patronymic) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_segment'' AS column_name,
+
+  COUNT(DISTINCT user_segment) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''user_type'' AS column_name,
+
+  COUNT(DISTINCT user_type) AS unique_count
+
+  FROM anti_frod
+
+  UNION ALL
+
+  SELECT
+
+  ''usr_ip_cur_add'' AS column_name,
+
+  COUNT(DISTINCT usr_ip_cur_add) AS unique_count
+
+  FROM anti_frod'
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 094fc1fa-42e9-427d-a9a1-0fa661fb5fa8
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: unique_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: column_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 2f651e35-38e7-4b9b-a47e-87996c769118

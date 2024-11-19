@@ -1,0 +1,53 @@
+slice_name: Time_5
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 171__table
+  viz_type: table
+  query_mode: raw
+  groupby: []
+  time_grain_sqla: P1D
+  temporal_columns_lookup: {}
+  all_columns:
+  - text_column_count
+  - numeric_column_count
+  - time_column_count
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  allow_render_html: true
+  column_config:
+    text_column_count:
+      horizontalAlign: center
+    numeric_column_count:
+      horizontalAlign: center
+    time_column_count:
+      horizontalAlign: center
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  conditional_formatting:
+  - column: text_column_count
+    colorScheme: '#FDE380'
+    operator: None
+  - column: numeric_column_count
+    colorScheme: '#FDE380'
+    operator: None
+  - column: time_column_count
+    colorScheme: '#FDE380'
+    operator: None
+  comparison_type: values
+  extra_form_data: {}
+  dashboards: []
+  annotation_layers: []
+query_context: null
+cache_timeout: null
+uuid: f5e2a0e1-f0b0-46cc-b5f3-24e33d35c315
+version: 1.0.0
+dataset_uuid: d661cc21-5919-4136-aa9d-cec6f3886047

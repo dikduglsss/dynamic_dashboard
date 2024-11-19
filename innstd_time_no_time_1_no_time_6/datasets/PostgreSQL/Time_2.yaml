@@ -1,0 +1,196 @@
+table_name: Time_2
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: postgres
+schema: public
+sql: "SELECT \r\n    GREATEST(\r\n        COUNT('atm_acquiring_country'),\r\n    \
+  \    COUNT('atm_acquiring_icc'),\r\n        COUNT('atm_branch'),\r\n        COUNT('atm_card_entry_mode'),\r\
+  \n        COUNT('atm_cardless'),\r\n        COUNT('atm_cash_in'),\r\n        COUNT('atm_cash_in_acc'),\r\
+  \n        COUNT('atm_cash_in_pay'),\r\n        COUNT('atm_city'),\r\n        COUNT('atm_class'),\r\
+  \n        COUNT('atm_continent'),\r\n        COUNT('atm_country'),\r\n        COUNT('atm_cvv_check'),\r\
+  \n        COUNT('atm_exchange'),\r\n        COUNT('atm_forwarding_icc'),\r\n   \
+  \     COUNT('atm_is_fi_owner'),\r\n        COUNT('atm_merchant_id'),\r\n       \
+  \ COUNT('atm_merchant_name'),\r\n        COUNT('atm_owner_fi_name'),\r\n       \
+  \ COUNT('atm_pin_check'),\r\n        COUNT('atm_pin_entry_mode'),\r\n        COUNT('atm_receiving_icc'),\r\
+  \n        COUNT('atm_region'),\r\n        COUNT('atm_retailer_name'),\r\n      \
+  \  COUNT('atm_usr_num_hit'),\r\n        COUNT('atm_virt'),\r\n        COUNT('atm_zip'),\r\
+  \n        COUNT('branch_branch'),\r\n        COUNT('branch_host'),\r\n        COUNT('branch_office'),\r\
+  \n        COUNT('branch_operator_id'),\r\n        COUNT('branch_tercode'),\r\n \
+  \       COUNT('card_balance'),\r\n        COUNT('card_balance_currency'),\r\n  \
+  \      COUNT('card_bin'),\r\n        COUNT('card_category'),\r\n        COUNT('card_contract_currency'),\r\
+  \n        COUNT('card_day_limit'),\r\n        COUNT('card_day_limit_currency'),\r\
+  \n        COUNT('card_days_since_issue'),\r\n        COUNT('card_expire_date'),\r\
+  \n        COUNT('card_issue_date'),\r\n        COUNT('card_issuer_country'),\r\n\
+  \        COUNT('card_issuer_id'),\r\n        COUNT('card_number'),\r\n        COUNT('card_product'),\r\
+  \n        COUNT('card_system'),\r\n        COUNT('card_type'),\r\n        COUNT('cardholder_amount'),\r\
+  \n        COUNT('cardholder_currency'),\r\n        COUNT('channel'),\r\n       \
+  \ COUNT('client_trx_id'),\r\n        COUNT('conv_rate'),\r\n        COUNT('device_tz'),\r\
+  \n        COUNT('devi_src_mob_har'),\r\n        COUNT('devi_src_mob_osid'),\r\n\
+  \        COUNT('ec_card_validarion_res'),\r\n        COUNT('ec_cvv2_data'),\r\n\
+  \        COUNT('event_time'),\r\n        COUNT('event_type'),\r\n        COUNT('evt_act'),\r\
+  \n        COUNT('ext_amount_rub'),\r\n        COUNT('ext_branch_region'),\r\n  \
+  \      COUNT('ext_device_hash'),\r\n        COUNT('ext_evt_des'),\r\n        COUNT('ext_issuer_bank_name'),\r\
+  \n        COUNT('ext_mtid'),\r\n        COUNT('ext_operation_category'),\r\n   \
+  \     COUNT('ext_operation_id'),\r\n        COUNT('ext_operation_type'),\r\n   \
+  \     COUNT('ext_payee_acc'),\r\n        COUNT('ext_payee_bic'),\r\n        COUNT('ext_payee_card_num'),\r\
+  \n        COUNT('ext_payee_inn'),\r\n        COUNT('ext_user_phone'),\r\n      \
+  \  COUNT('ext_payer_inn'),\r\n        COUNT('ext_resp_code'),\r\n        COUNT('ext_user_bic'),\r\
+  \n        COUNT('ext_user_inn'),\r\n        COUNT('ext_usr_log'),\r\n        COUNT('ext_usr_tax'),\r\
+  \n        COUNT('fraud_type'),\r\n        COUNT('fraud_type_aml'),\r\n        COUNT('geoip_city'),\r\
+  \n        COUNT('geoip_country'),\r\n        COUNT('geoip_provider'),\r\n      \
+  \  COUNT('geoip_region'),\r\n        COUNT('ip_classa'),\r\n        COUNT('ip_classb'),\r\
+  \n        COUNT('ip_classc'),\r\n        COUNT('int_web_devi_key'),\r\n        COUNT('ip_mv_too_fast'),\r\
+  \n        COUNT('mcc'),\r\n        COUNT('mcc_group'),\r\n        COUNT('operator_department'),\r\
+  \n        COUNT('operator_name'),\r\n        COUNT('operator_nubmer'),\r\n     \
+  \   COUNT('operator_position'),\r\n        COUNT('org_id'),\r\n        COUNT('payee_account_type'),\r\
+  \n        COUNT('payee_amount'),\r\n        COUNT('payee_bank_type'),\r\n      \
+  \  COUNT('payee_bic'),\r\n        COUNT('payee_currency'),\r\n        COUNT('payee_name'),\r\
+  \n        COUNT('payee_ownership'),\r\n        COUNT('payee_rate'),\r\n        COUNT('payee_user_id'),\r\
+  \n        COUNT('payer_bic'),\r\n        COUNT('payer_name'),\r\n        COUNT('policy_action'),\r\
+  \n        COUNT('policy_action_aml'),\r\n        COUNT('policy_action_fr'),\r\n\
+  \        COUNT('policy_rule_id'),\r\n        COUNT('policy_rule_id_aml'),\r\n  \
+  \      COUNT('policy_rule_id_fr'),\r\n        COUNT('policy_rule_name'),\r\n   \
+  \     COUNT('policy_rule_num_aml'),\r\n        COUNT('policy_rule_num_fr'),\r\n\
+  \        COUNT('pos_active_state'),\r\n        COUNT('pos_auth_cap'),\r\n      \
+  \  COUNT('pos_auth_entity'),\r\n        COUNT('pos_auth_method'),\r\n        COUNT('pos_capture_cap'),\r\
+  \n        COUNT('pos_card_presence'),\r\n        COUNT('pos_cardholder_presence'),\r\
+  \n        COUNT('pos_data_input_cap'),\r\n        COUNT('pos_data_input_mode'),\r\
+  \n        COUNT('pos_data_out_cap'),\r\n        COUNT('pos_final_scoring'),\r\n\
+  \        COUNT('pos_merchant_scoring'),\r\n        COUNT('pos_op_env'),\r\n    \
+  \    COUNT('pos_partial_approval'),\r\n        COUNT('pos_pin_cap_cap'),\r\n   \
+  \     COUNT('pos_pin_service_code'),\r\n        COUNT('pos_pin_service_result'),\r\
+  \n        COUNT('pos_purchase_amt_only'),\r\n        COUNT('pos_real_time_subst'),\r\
+  \n        COUNT('pos_term_out_cap'),\r\n        COUNT('pos_type'),\r\n        COUNT('repl_amount'),\r\
+  \n        COUNT('resolution'),\r\n        COUNT('resolution_aml'),\r\n        COUNT('resolution_date'),\r\
+  \n        COUNT('resolution_date_aml'),\r\n        COUNT('risk_score_aml_final'),\r\
+  \n        COUNT('risk_score_final'),\r\n        COUNT('risk_score_payee_final'),\r\
+  \n        COUNT('ter_code'),\r\n        COUNT('tra_cln_def'),\r\n        COUNT('tra_cln_typ'),\r\
+  \n        COUNT('tra_tra_amo_amo'),\r\n        COUNT('tra_tra_amo_cur'),\r\n   \
+  \     COUNT('tra_tra_oth_id'),\r\n        COUNT('tra_tra_own_id'),\r\n        COUNT('trx_atm_id'),\r\
+  \n        COUNT('trx_terminal_id'),\r\n        COUNT('u_atm_day_f_hit'),\r\n   \
+  \     COUNT('u_atm_day_l_hit'),\r\n        COUNT('u_day_sin_ema_cha'),\r\n     \
+  \   COUNT('u_day_sin_f_hit'),\r\n        COUNT('u_day_sin_pwd_cha'),\r\n       \
+  \ COUNT('u_day_sin_tel_cha'),\r\n        COUNT('u_devprn_day_f_hit'),\r\n      \
+  \  COUNT('u_hour_sin_f_hit'),\r\n        COUNT('u_ip_day_sin_f_hit'),\r\n      \
+  \  COUNT('u_ip_diff_from_p'),\r\n        COUNT('u_ipb_day_sin_f_hit'),\r\n     \
+  \   COUNT('u_ipc_day_sin_f_hit'),\r\n        COUNT('u_isp_day_sin_f_hit'),\r\n \
+  \       COUNT('u_mobdev_day_sin_f_hit'),\r\n        COUNT('u_mobdev_day_sin_l_hit'),\r\
+  \n        COUNT('u_mobisp_day_sin_f_hit'),\r\n        COUNT('u_mobmac_day_sin_f_hit'),\r\
+  \n        COUNT('u_p_day_sin_f_hit'),\r\n        COUNT('u_sim_day_sin_f_hit'),\r\
+  \n        COUNT('u_webdev_day_sin_f_hit'),\r\n        COUNT('u_webdev_day_sin_l_hit'),\r\
+  \n        COUNT('unified_id'),\r\n        COUNT('user_birthdate'),\r\n        COUNT('user_category'),\r\
+  \n        COUNT('user_doc_number'),\r\n        COUNT('user_doc_type'),\r\n     \
+  \   COUNT('user_first_name'),\r\n        COUNT('user_id'),\r\n        COUNT('user_last_name'),\r\
+  \n        COUNT('user_name'),\r\n        COUNT('user_patronymic'),\r\n        COUNT('user_segment'),\r\
+  \n        COUNT('user_type'),\r\n        COUNT('usr_ip_cur_add')\r\n    ) AS count_line\r\
+  \n   FROM \r\n    anti_frod\r\n   WHERE \r\n    'atm_acquiring_country' IS NOT NULL\
+  \ OR 'atm_acquiring_icc' IS NOT NULL OR 'atm_branch' IS NOT NULL OR 'atm_card_entry_mode'\
+  \ IS NOT NULL OR 'atm_cardless' IS NOT NULL OR 'atm_cash_in' IS NOT NULL OR 'atm_cash_in_acc'\
+  \ IS NOT NULL OR 'atm_cash_in_pay' IS NOT NULL OR 'atm_city' IS NOT NULL OR 'atm_class'\
+  \ IS NOT NULL OR 'atm_continent' IS NOT NULL OR 'atm_country' IS NOT NULL OR 'atm_cvv_check'\
+  \ IS NOT NULL OR 'atm_exchange' IS NOT NULL OR 'atm_forwarding_icc' IS NOT NULL\
+  \ OR 'atm_is_fi_owner' IS NOT NULL OR 'atm_merchant_id' IS NOT NULL OR 'atm_merchant_name'\
+  \ IS NOT NULL OR 'atm_owner_fi_name' IS NOT NULL OR 'atm_pin_check' IS NOT NULL\
+  \ OR 'atm_pin_entry_mode' IS NOT NULL OR 'atm_receiving_icc' IS NOT NULL OR 'atm_region'\
+  \ IS NOT NULL OR 'atm_retailer_name' IS NOT NULL OR 'atm_usr_num_hit' IS NOT NULL\
+  \ OR 'atm_virt' IS NOT NULL OR 'atm_zip' IS NOT NULL OR 'branch_branch' IS NOT NULL\
+  \ OR 'branch_host' IS NOT NULL OR 'branch_office' IS NOT NULL OR 'branch_operator_id'\
+  \ IS NOT NULL OR 'branch_tercode' IS NOT NULL OR 'card_balance' IS NOT NULL OR 'card_balance_currency'\
+  \ IS NOT NULL OR 'card_bin' IS NOT NULL OR 'card_category' IS NOT NULL OR 'card_contract_currency'\
+  \ IS NOT NULL OR 'card_day_limit' IS NOT NULL OR 'card_day_limit_currency' IS NOT\
+  \ NULL OR 'card_days_since_issue' IS NOT NULL OR 'card_expire_date' IS NOT NULL\
+  \ OR 'card_issue_date' IS NOT NULL OR 'card_issuer_country' IS NOT NULL OR 'card_issuer_id'\
+  \ IS NOT NULL OR 'card_number' IS NOT NULL OR 'card_product' IS NOT NULL OR 'card_system'\
+  \ IS NOT NULL OR 'card_type' IS NOT NULL OR 'cardholder_amount' IS NOT NULL OR 'cardholder_currency'\
+  \ IS NOT NULL OR 'channel' IS NOT NULL OR 'client_trx_id' IS NOT NULL OR 'conv_rate'\
+  \ IS NOT NULL OR 'device_tz' IS NOT NULL OR 'devi_src_mob_har' IS NOT NULL OR 'devi_src_mob_osid'\
+  \ IS NOT NULL OR 'ec_card_validarion_res' IS NOT NULL OR 'ec_cvv2_data' IS NOT NULL\
+  \ OR 'event_time' IS NOT NULL OR 'event_type' IS NOT NULL OR 'evt_act' IS NOT NULL\
+  \ OR 'ext_amount_rub' IS NOT NULL OR 'ext_branch_region' IS NOT NULL OR 'ext_device_hash'\
+  \ IS NOT NULL OR 'ext_evt_des' IS NOT NULL OR 'ext_issuer_bank_name' IS NOT NULL\
+  \ OR 'ext_mtid' IS NOT NULL OR 'ext_operation_category' IS NOT NULL OR 'ext_operation_id'\
+  \ IS NOT NULL OR 'ext_operation_type' IS NOT NULL OR 'ext_payee_acc' IS NOT NULL\
+  \ OR 'ext_payee_bic' IS NOT NULL OR 'ext_payee_card_num' IS NOT NULL OR 'ext_payee_inn'\
+  \ IS NOT NULL OR 'ext_user_phone' IS NOT NULL OR 'ext_payer_inn' IS NOT NULL OR\
+  \ 'ext_resp_code' IS NOT NULL OR 'ext_user_bic' IS NOT NULL OR 'ext_user_inn' IS\
+  \ NOT NULL OR 'ext_usr_log' IS NOT NULL OR 'ext_usr_tax' IS NOT NULL OR 'fraud_type'\
+  \ IS NOT NULL OR 'fraud_type_aml' IS NOT NULL OR 'geoip_city' IS NOT NULL OR 'geoip_country'\
+  \ IS NOT NULL OR 'geoip_provider' IS NOT NULL OR 'geoip_region' IS NOT NULL OR 'ip_classa'\
+  \ IS NOT NULL OR 'ip_classb' IS NOT NULL OR 'ip_classc' IS NOT NULL OR 'int_web_devi_key'\
+  \ IS NOT NULL OR 'ip_mv_too_fast' IS NOT NULL OR 'mcc' IS NOT NULL OR 'mcc_group'\
+  \ IS NOT NULL OR 'operator_department' IS NOT NULL OR 'operator_name' IS NOT NULL\
+  \ OR 'operator_nubmer' IS NOT NULL OR 'operator_position' IS NOT NULL OR 'org_id'\
+  \ IS NOT NULL OR 'payee_account_type' IS NOT NULL OR 'payee_amount' IS NOT NULL\
+  \ OR 'payee_bank_type' IS NOT NULL OR 'payee_bic' IS NOT NULL OR 'payee_currency'\
+  \ IS NOT NULL OR 'payee_name' IS NOT NULL OR 'payee_ownership' IS NOT NULL OR 'payee_rate'\
+  \ IS NOT NULL OR 'payee_user_id' IS NOT NULL OR 'payer_bic' IS NOT NULL OR 'payer_name'\
+  \ IS NOT NULL OR 'policy_action' IS NOT NULL OR 'policy_action_aml' IS NOT NULL\
+  \ OR 'policy_action_fr' IS NOT NULL OR 'policy_rule_id' IS NOT NULL OR 'policy_rule_id_aml'\
+  \ IS NOT NULL OR 'policy_rule_id_fr' IS NOT NULL OR 'policy_rule_name' IS NOT NULL\
+  \ OR 'policy_rule_num_aml' IS NOT NULL OR 'policy_rule_num_fr' IS NOT NULL OR 'pos_active_state'\
+  \ IS NOT NULL OR 'pos_auth_cap' IS NOT NULL OR 'pos_auth_entity' IS NOT NULL OR\
+  \ 'pos_auth_method' IS NOT NULL OR 'pos_capture_cap' IS NOT NULL OR 'pos_card_presence'\
+  \ IS NOT NULL OR 'pos_cardholder_presence' IS NOT NULL OR 'pos_data_input_cap' IS\
+  \ NOT NULL OR 'pos_data_input_mode' IS NOT NULL OR 'pos_data_out_cap' IS NOT NULL\
+  \ OR 'pos_final_scoring' IS NOT NULL OR 'pos_merchant_scoring' IS NOT NULL OR 'pos_op_env'\
+  \ IS NOT NULL OR 'pos_partial_approval' IS NOT NULL OR 'pos_pin_cap_cap' IS NOT\
+  \ NULL OR 'pos_pin_service_code' IS NOT NULL OR 'pos_pin_service_result' IS NOT\
+  \ NULL OR 'pos_purchase_amt_only' IS NOT NULL OR 'pos_real_time_subst' IS NOT NULL\
+  \ OR 'pos_term_out_cap' IS NOT NULL OR 'pos_type' IS NOT NULL OR 'repl_amount' IS\
+  \ NOT NULL OR 'resolution' IS NOT NULL OR 'resolution_aml' IS NOT NULL OR 'resolution_date'\
+  \ IS NOT NULL OR 'resolution_date_aml' IS NOT NULL OR 'risk_score_aml_final' IS\
+  \ NOT NULL OR 'risk_score_final' IS NOT NULL OR 'risk_score_payee_final' IS NOT\
+  \ NULL OR 'ter_code' IS NOT NULL OR 'tra_cln_def' IS NOT NULL OR 'tra_cln_typ' IS\
+  \ NOT NULL OR 'tra_tra_amo_amo' IS NOT NULL OR 'tra_tra_amo_cur' IS NOT NULL OR\
+  \ 'tra_tra_oth_id' IS NOT NULL OR 'tra_tra_own_id' IS NOT NULL OR 'trx_atm_id' IS\
+  \ NOT NULL OR 'trx_terminal_id' IS NOT NULL OR 'u_atm_day_f_hit' IS NOT NULL OR\
+  \ 'u_atm_day_l_hit' IS NOT NULL OR 'u_day_sin_ema_cha' IS NOT NULL OR 'u_day_sin_f_hit'\
+  \ IS NOT NULL OR 'u_day_sin_pwd_cha' IS NOT NULL OR 'u_day_sin_tel_cha' IS NOT NULL\
+  \ OR 'u_devprn_day_f_hit' IS NOT NULL OR 'u_hour_sin_f_hit' IS NOT NULL OR 'u_ip_day_sin_f_hit'\
+  \ IS NOT NULL OR 'u_ip_diff_from_p' IS NOT NULL OR 'u_ipb_day_sin_f_hit' IS NOT\
+  \ NULL OR 'u_ipc_day_sin_f_hit' IS NOT NULL OR 'u_isp_day_sin_f_hit' IS NOT NULL\
+  \ OR 'u_mobdev_day_sin_f_hit' IS NOT NULL OR 'u_mobdev_day_sin_l_hit' IS NOT NULL\
+  \ OR 'u_mobisp_day_sin_f_hit' IS NOT NULL OR 'u_mobmac_day_sin_f_hit' IS NOT NULL\
+  \ OR 'u_p_day_sin_f_hit' IS NOT NULL OR 'u_sim_day_sin_f_hit' IS NOT NULL OR 'u_webdev_day_sin_f_hit'\
+  \ IS NOT NULL OR 'u_webdev_day_sin_l_hit' IS NOT NULL OR 'unified_id' IS NOT NULL\
+  \ OR 'user_birthdate' IS NOT NULL OR 'user_category' IS NOT NULL OR 'user_doc_number'\
+  \ IS NOT NULL OR 'user_doc_type' IS NOT NULL OR 'user_first_name' IS NOT NULL OR\
+  \ 'user_id' IS NOT NULL OR 'user_last_name' IS NOT NULL OR 'user_name' IS NOT NULL\
+  \ OR 'user_patronymic' IS NOT NULL OR 'user_segment' IS NOT NULL OR 'user_type'\
+  \ IS NOT NULL OR 'usr_ip_cur_add' IS NOT NULL;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: fd91a537-b418-4be5-92ca-c62d01b85d63
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: count_line
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 2f651e35-38e7-4b9b-a47e-87996c769118

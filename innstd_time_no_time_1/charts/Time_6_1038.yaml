@@ -1,0 +1,41 @@
+slice_name: Time_6
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 172__table
+  viz_type: table
+  query_mode: raw
+  groupby: []
+  time_grain_sqla: P1D
+  temporal_columns_lookup: {}
+  all_columns:
+  - name
+  - average_value_1
+  - min_value_1
+  - max_value_1
+  - average_value_2
+  - min_value_2
+  - max_value_2
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  allow_render_html: true
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 82
+  annotation_layers: []
+query_context: null
+cache_timeout: null
+uuid: b4ee20a8-6ae2-40b6-866b-764d9599d122
+version: 1.0.0
+dataset_uuid: b0bbe07d-1114-45bf-ac3b-0898f8a5fbe6
